@@ -1,8 +1,8 @@
-﻿# Jay Harris's dotfiles for Windows
+﻿# Dennis Muensterer's dotfiles for Windows
 
 A collection of PowerShell files for Windows, including common application installation through `Chocolatey` and `npm`, and developer-minded Windows configuration defaults. 
 
-Are you a Mac user? Check out my [dotfiles](https://github.com/jayharris/dotfiles) repository.
+Are you a Mac user? Check out my [dotfiles](https://github.com/dnnsmnstrr/dotfiles) repository.
 
 ## Installation
 
@@ -12,7 +12,7 @@ You can clone the repository wherever you want. (I like to keep it in `~\Project
 
 From PowerShell:
 ```posh
-git clone https://github.com/jayharris/dotfiles-windows.git; cd dotfiles-windows; . .\bootstrap.ps1
+git clone https://github.com/dnnsmnstrr/dotfiles-windows.git; cd dotfiles-windows; . .\bootstrap.ps1
 ```
 
 To update your settings, `cd` into your local `dotfiles-windows` repository within PowerShell and then:
@@ -30,7 +30,7 @@ Note: You must have your execution policy set to unrestricted (or at least in by
 To install these dotfiles from PowerShell without Git:
 
 ```bash
-iex ((new-object net.webclient).DownloadString('https://raw.github.com/jayharris/dotfiles-windows/master/setup/install.ps1'))
+iex ((new-object net.webclient).DownloadString('https://raw.github.com/dnnsmnstrr/dotfiles-windows/master/setup/install.ps1'))
 ```
 
 To update later on, just run that command again.
