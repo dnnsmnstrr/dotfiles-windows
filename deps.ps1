@@ -35,30 +35,66 @@ if ((which cinst) -eq $null) {
     Refresh-Environment
     choco feature enable -n=allowGlobalConfirmation
 }
+choco install chocolatey-core.extension
+choco install chocolateygui       --limit-output
 
 # system and cli
 choco install curl                --limit-output
 choco install nuget.commandline   --limit-output
 choco install webpi               --limit-output
 choco install git.install         --limit-output -params '"/GitAndUnixToolsOnPath /NoShellIntegration"'
+choco install git-lfs             --limit-output
 choco install nvm.portable        --limit-output
 choco install python              --limit-output
+choco install pip                 --limit-output
 choco install ruby                --limit-output
+choco install golang              --limit-output
+choco install jre8                --limit-output
+choco install jdk8                --limit-output
 
 #fonts
 choco install sourcecodepro       --limit-output
 
 # browsers
 choco install GoogleChrome        --limit-output; <# pin; evergreen #> choco pin add --name GoogleChrome        --limit-output
-choco install GoogleChrome.Canary --limit-output; <# pin; evergreen #> choco pin add --name GoogleChrome.Canary --limit-output
 choco install Firefox             --limit-output; <# pin; evergreen #> choco pin add --name Firefox             --limit-output
 choco install Opera               --limit-output; <# pin; evergreen #> choco pin add --name Opera               --limit-output
+choco install adobereader         --limit-output
 
 # dev tools and frameworks
+choco install vscode              --limit-output; <# pin; evergreen #> choco pin add --name VScode              --limit-output
 choco install atom                --limit-output; <# pin; evergreen #> choco pin add --name Atom                --limit-output
-choco install Fiddler             --limit-output
-choco install vim                 --limit-output
+choco install sourcetree          --limit-output
+choco install hyper               --limit-output; <# pin; evergreen #> choco pin add --name Hyper               --limit-output
+choco install postman             --limit-output
+choco install awscli              --limit-output
 choco install winmerge            --limit-output
+choco install autohotkey.portable --limit-output
+choco install ccleaner            --limit-output
+choco install treesizefree        --limit-output
+
+# communication
+choco install slack               --limit-output; <# pin; evergreen #> choco pin add --name Slack               --limit-output
+choco install telegram            --limit-output
+choco install zoom                --limit-output
+
+# games
+choco install steam               --limit-output; <# pin; evergreen #> choco pin add --name Steam               --limit-output
+choco install geforce-experience  --limit-output
+
+# media
+choco install spotify             --limit-output; <# pin; evergreen #> choco pin add --name Spotify             --limit-output
+choco install vlc                 --limit-output
+choco install calibre             --limit-output
+choco install foxitreader         --limit-output
+choco install youtube-dl          --limit-output
+choco install ffmpeg              --limit-output
+choco install audacity            --limit-output
+   
+# storage
+choco install dropbox             --limit-output
+choco install googledrive         --limit-output
+choco install rufus               --limit-output
 
 Refresh-Environment
 
@@ -113,6 +149,7 @@ if (which npm) {
     npm install -g node-inspector
     npm install -g yo
 }
+choco install yarn --limit-output
 
 ### Janus for vim
 Write-Host "Installing Janus..." -ForegroundColor "Yellow"
