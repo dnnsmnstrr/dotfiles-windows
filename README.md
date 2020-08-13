@@ -79,7 +79,17 @@ When setting up a new Windows box, you may want to install some common packages,
 > **Visual Studio Extensions**  
 > Extensions will be installed into your most current version of Visual Studio. You can also install additional plugins at any time via `Install-VSExtension $url`. The Url can be found on the gallery; it's the extension's `Download` link url.
 
+## Additional Configuration
 
+### Hyper-Key
+Disable Office-Key
+```ps
+REG ADD HKCU\Software\Classes\ms-officeapp\Shell\Open\Command /t REG_SZ /d rundll32
+```
+- https://www.howtogeek.com/445318/how-to-remap-the-office-key-on-your-keyboard/
+
+
+---
 
 ## Forking your own version
 
