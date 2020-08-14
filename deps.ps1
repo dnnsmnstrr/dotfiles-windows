@@ -69,11 +69,11 @@ choco install hyper               --limit-output; <# pin; evergreen #> choco pin
 choco install postman             --limit-output
 choco install awscli              --limit-output
 choco install winmerge            --limit-output
-choco install autohotkey.portable --limit-output
 choco install ccleaner            --limit-output
 choco install treesizefree        --limit-output
 choco install wox                 --limit-output
 choco install autohotkey.install  --limit-output
+choco install autodesk-fusion360  --limit-output
 
 # communication
 choco install slack               --limit-output; <# pin; evergreen #> choco pin add --name Slack               --limit-output
